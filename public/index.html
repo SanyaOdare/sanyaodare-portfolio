@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SanyaOdare sample personal portfolio</title>
   <link rel="stylesheet" href="./style.css">
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
 </head>
 <body>
   <!-- navbar -->
@@ -27,7 +29,10 @@
   <section class="home">
     <div class="main-content">
       <h1 class="main-heading"><span class="highlight">meet </span>SanyaOdare</h1>
-      <p class="job">frontend developer extraordinaire</p><br>
+      <p class="job frontdev" id="frontdev">frontend developer extraordinaire |
+        <span><i class="fab fa-js fa-1x frontdev"></i></span> |
+        <span><i class="fab fa-css3-alt frontdev"></i></span> |
+        <span><i class="fab fa-html5 frontdev"></i></span></p><br>
       <p class="elevator-pitch">I am a passionate Front-End Developer with flair for secure and scalable mobile web applications. My
         adept knowledge of HTML5, CSS3, JavaScript, Git (Version Control) and React is above par. Think of me when
         affinity for great user experience is of utmost priority. I thrive in an Agile team environment with focus on
@@ -60,7 +65,61 @@
         <a href="#" class="btn">download my resume</a>
       </div>
     </div>
+    <!-- skill section -->
+    <h2 class="heading">skills / work tools</h2>
+      <div class="separator"></div>
+      <div class="skill-container">
+        <div class="skill-card" style="--bg: #f7df1e">
+          <p class="skill">JavaScript</p>
+        </div>
+        <div class="skill-card" style="--bg: #2965f1">
+          <p class="skill">CSS</p>
+        </div>
+        <div class="skill-card" style="--bg: #f16529">
+          <p class="skill">HTML</p>
+        </div>
+        <div class="skill-card" style="--bg: #7f12f9">
+          <p class="skill">Bootstrap</p>
+        </div>
+        <div class="skill-card large" style="--bg: #61dafb">
+          <p class="skill">ReactJS</p>
+        </div>
+        <div class="skill-card large" style="--bg: #689f63">
+          <p class="skill">NodeJS</p>
+        </div>
+        <div class="skill-card large" style="--bg: #f05133">
+          <p class="skill">Git</p>
+        </div>
+        <div class="skill-card large" style="--bg: #f10a5a">
+          <p class="skill">Much More</p>
+        </div>
+      </div>
   </section>
+
+  <!-- project section -->
+  <section class="project" id="project-section">
+    <h2 class="heading">Proj<span class="highlight">ects</span></h2>
+    <p class="sub-heading">Lorem ipsum dolor sit amet consectetur.</p>
+    <div class="separator"></div>
+
+    <div class="filters">
+      <button class="filter-btn active" id="all">All</button>
+      <button class="filter-btn" id="javascript">javascript</button>
+      <button class="filter-btn" id="ui">ui/ux</button>
+      <button class="filter-btn" id="backend">backend</button>
+      <button class="filter-btn" id="fullstack">fullstack</button>
+    </div>
+  </section>
+
+  <div class="project-container">
+    <div class="project-card">
+      <img src="img/project (1).png" alt="">
+      <div class="content">
+        <h1 class="project-name">project one</h1>
+        <span class="tags">#javascript</span>
+      </div>
+    </div>
+  </div>
 
   <script src="./app.js"></script>
 </body>

@@ -109,6 +109,10 @@ body {
   font-weight: 500;
 }
 
+.frontdev, #frontdev  {
+  color: rgba(194, 194, 194, 0.75);
+}
+
 .highlight {
   color: #fff;
 }
@@ -120,7 +124,7 @@ body {
 .job {
   color: #fff;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 500;
   width: fit-content;
   display: block;
   margin: -15px 0 10px;
@@ -240,4 +244,82 @@ body {
   font-weight: 300;
   line-height: 28px;
   margin-bottom: 40px;
+}
+
+/* skill section */
+
+.skill-container {
+  position: relative;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.skill-card {
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid #464646;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.skill {
+  font-size: 2rem;
+  color: #464646;
+  line-height: 200px;
+}
+
+.skill-card:hover {
+  background: var(--bg);
+}
+
+.skill-card:hover .skill {
+  color: #fff;
+}
+
+.skill-card.large {
+  grid-column: 2 span;
+}
+
+/* project section */
+
+.project, .contact {
+  position: relative;
+  padding: 50px 10vw;
+}
+
+.filters {
+  width: fit-content;
+  display: block;
+  margin: 100px auto;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  text-transform: capitalize;
+  margin: 0 5px 10px;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: #ff3559;
+  color: #fff;
+}
+
+.project-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  position: relative;
+  cursor: pointer;
+  display: block;
 }
