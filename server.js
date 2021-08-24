@@ -18,3 +18,24 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
   console.log('listening on port 3000.....');
 })
+
+app.post('/mail', (req, res) => {
+  const { firstname, lastname, email, msg } = req.body;
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD
+    }
+  })
+
+  const mailOptions = {
+    from: 'sender email',
+    to: 'receiver email',
+    subject: 'Portfolio',
+    text: `First name: ${firstname}, \nLast name: ${lastname}, \nEmail: ${email}, \nMessage: ${msg}`
+  }
+
+  
+})
