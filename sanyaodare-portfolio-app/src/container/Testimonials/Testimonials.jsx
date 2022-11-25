@@ -4,7 +4,7 @@ import './Testimonials.scss';
 
 const Testimonials = () => {
   return (
-    <h1>Testimonials</h1>
+    <div>Testimonials</div>
   )
 }
 
