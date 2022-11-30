@@ -15,12 +15,11 @@ const Work = () => {
   useEffect(() => {
     const query = '*[_type == "works"]';
 
-    client.fetch(query)
-      .then((data) => {
+    client.fetch(query).then((data) => {
         setWorks(data);
         setFilterWork(data);
-      })
-  }, [])
+      });
+  }, []);
   
 
   const handleWorkFilter = (item) => {
@@ -36,7 +35,7 @@ const Work = () => {
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
-            className={`app__work-filter app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
+            className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
           >
             {item}
           </div>
@@ -68,16 +67,33 @@ const Work = () => {
                   >
                     <AiFillEye />
                   </motion.div>
-
                 </a>
-
+                <a href={work.codeLink} target='_blank' rel='noreferrer'>
+                  <motion.div
+                    whileInView={{scale: [0, 1]}}
+                    whileHover={{scale: [1, 0.9]}}
+                    transition={{ duration: 0.25}}
+                    className='app__flex'
+                  >
+                    <AiFillGithub />
+                  </motion.div>
+                </a>
               </motion.div>
+            </div>
+
+            <div className='app__work-content app__flex'>
+              <h4 className='bold-text'>{work.title}</h4>
+              <p className='p-text' style={{ marginTop: 10 }}>{work.description}</p>
+
+              <div className='app__work-tag app__flex'>
+                <p className='p-text'>{work.tags[0]}</p>
+              </div>
             </div>
           </div>
         ))}
       </motion.div>
     </>
-  )
-}
+  );
+};
 
-export default Work;
+export default AppWrap(Work, 'work');
