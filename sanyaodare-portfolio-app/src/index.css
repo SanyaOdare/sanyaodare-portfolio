@@ -2,7 +2,7 @@
 /* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"); */
 
 :root {
-  --font-base: "Inter", sans-serif;
+  --font-base: 'Inter', sans-serif;
 
   --primary-color: #edf2f8;
   --secondary-color: #313bac;
