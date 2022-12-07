@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ReactToolTip from 'react-tooltip'
 
-// import { AppWrap } from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Skills.scss';
-// import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 
 const Skills = () => {
   const [experience, setExperience] = useState([])
@@ -30,7 +29,8 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className='head-text'>Skills & Experience</h2>
+      <h2 className='head-text'>Skills & Experiences</h2>
+
       <div className='app__skills-container'>
         <motion.div className='app__skills-list'>
           {skills?.map((skill) => (
@@ -40,7 +40,10 @@ const Skills = () => {
               className='app__skills-item app__flex'
               key={skill.name}
             >
-              <div className='app__flex' style={{ backgroundColor: skill.bgColor}}>
+              <div 
+                className='app__flex' 
+                style={{ backgroundColor: skill.bgColor}}
+              >
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
               <p className='p-text'>{skill.name}</p>
@@ -86,7 +89,11 @@ const Skills = () => {
         </motion.div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Skills;
+export default AppWrap(
+  MotionWrap(Skills, 'app__skills'),
+  'skills',
+  'app__whitebg'
+);

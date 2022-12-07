@@ -20,7 +20,7 @@
     color: var(--gray-color);
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     margin: 0.5rem;
 
     &:hover {
@@ -57,7 +57,7 @@
     color: var(--black-color);
 
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 
     &:hover {
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
@@ -106,7 +106,7 @@
 
   border-radius: 0.5rem;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 
   div {
     width: 50px;
@@ -119,7 +119,7 @@
     font-family: var(--font-base);
     font-weight: 800;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 
     svg {
       width: 50%;
